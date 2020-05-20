@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.all-cards-container {
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card-container + .card-container {
+    margin-left: 30px;
+}
+
+.card-container {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-container:nth-child(3n+1) {
+    background: rgb(255, 189, 146);
+    background: linear-gradient(90deg, rgba(255, 189, 146, 1) 0%, rgba(253, 131, 164, 1) 100%);
+}
+
+.card-container:nth-child(3n+2) {
+    background: rgb(141, 201, 247);
+    background: linear-gradient(90deg, rgba(141, 201, 247, 1) 0%, rgba(51, 150, 226, 1) 100%);
+}
+
+.card-container:nth-child(3n+3) {
+    background: rgb(174, 225, 224);
+    background: linear-gradient(90deg, rgba(174, 225, 224, 1) 0%, rgba(33, 211, 185, 1) 100%);
+}
+
+.card-container::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    right: -20%;
+    top: -70px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-container::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    right: -40px;
+    bottom: -130px;
+    background: rgba(255, 255, 255, 0.2);
+}
